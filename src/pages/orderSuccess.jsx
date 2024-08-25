@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const OrderSuccess = () => {
     return (
@@ -25,12 +26,12 @@ const OrderSuccess = () => {
                     Thank you for your purchase! Your order has been placed and is being processed.
                     You will receive an email confirmation shortly.
                 </p>
-                <button
+                <Link to="/shop"
                     className="mt-6 bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-200"
-                    onClick={() => window.location.href = '/'}
+
                 >
                     Continue Shopping
-                </button>
+                </Link>
             </div>
         </div>
     );
