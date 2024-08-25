@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { fetchProductById } from '../utils/api';
 import ProductRecommendations from './ProductRecommendation';
-import axios from 'axios';
+
 import { toast } from 'react-hot-toast';
 import { useAuth } from "../context/AuthContext"
+import axiosInstance from '../utils/axios';
 
 
 const ProductDetailPage = () => {
@@ -28,7 +29,7 @@ const ProductDetailPage = () => {
         }
 
         try {
-            let response = await axios.post(`https://e-comm-backend-pkj2.onrender.com/api/cart/`, cartData, { withCredentials: true })
+            let response = await axiosInstance.post(`/cart/`, cartData)
 
             if (response.data.status === "success") {
                 toast.success("item add in cart")

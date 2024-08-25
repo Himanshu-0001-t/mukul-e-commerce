@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from "react-hot-toast"
@@ -6,6 +5,7 @@ import { HiMiniPlus } from "react-icons/hi2";
 import { HiMinus } from "react-icons/hi";
 import { MdDelete } from "react-icons/md";
 import { useAuth } from "../context/AuthContext"
+import axiosInstance from '../utils/axios';
 
 const CartPage = () => {
     const [cartItems, setCartItems] = useState([])
@@ -13,7 +13,7 @@ const CartPage = () => {
 
     const getCartItem = async () => {
         try {
-            let resposne = await axios.get(`https://e-comm-backend-pkj2.onrender.com/api/cart/${user}`, { withCredentials: true })
+            let resposne = await axiosInstance.get(`/cart/${user}`)
 
             if (resposne.data.status === "success") {
                 setCartItems(resposne.data.data.cart.products)
@@ -33,7 +33,7 @@ const CartPage = () => {
         }
 
         try {
-            let response = await axios.patch("https://e-comm-backend-pkj2.onrender.com/api/cart/update", data, { withCredentials: true })
+            let response = await axiosInstance.patch("/cart/update", data)
             if (response.data.status === "success") {
                 toast.success("item quantity updated")
             }
@@ -65,7 +65,7 @@ const CartPage = () => {
         }
 
         try {
-            let response = await axios.post("https://e-comm-backend-pkj2.onrender.com/api/cart/remove", data, { withCredentials: true })
+            let response = await axiosInstance.post("/cart/remove", data)
             if (response.data.status === "success") {
                 toast.success(response.data.message)
                 getCartItem()

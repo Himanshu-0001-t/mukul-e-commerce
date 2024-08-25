@@ -1,6 +1,6 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuth } from "../context/AuthContext"
+import axiosInstance from '../utils/axios';
 
 const UserAccountPage = () => {
     const { user } = useAuth()
@@ -8,7 +8,7 @@ const UserAccountPage = () => {
 
 
     const getOrders = async () => {
-        let resposne = await axios.get(`https://e-comm-backend-pkj2.onrender.com/api/orders/${user}`, { withCredentials: true })
+        let resposne = await axiosInstance.get(`/orders/${user}`)
 
         if (resposne.data.status === "success") {
             setOrders(resposne.data.data)

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from "../context/AuthContext"
 import { toast } from 'react-hot-toast';
 import axios from 'axios';
+import axiosInstance from '../utils/axios';
 
 
 const Signin = () => {
@@ -23,7 +24,7 @@ const Signin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://e-comm-backend-pkj2.onrender.com/api/user/login", formData, { withCredentials: true })
+            const response = await axiosInstance.post("/user/login", formData)
 
             if (response.data.status === "success" || response.data.success) {
                 const token = response.data.user_id;
