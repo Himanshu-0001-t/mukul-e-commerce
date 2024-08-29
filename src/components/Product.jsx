@@ -62,7 +62,7 @@ const ProductDetailPage = () => {
         <div className="container mx-auto p-4">
             <div className="flex flex-col items-center lg:flex-row">
 
-                <div className="flex-1">
+                <div className="flex-1 my-5">
                     <img
                         src={product.image}
                         alt={product.name}
@@ -86,7 +86,7 @@ const ProductDetailPage = () => {
             </div>
 
 
-            <div className="mt-8">
+            <div className="my-20">
                 <h2 className="text-2xl font-bold mb-4">You Might Also Like</h2>
                 <ProductRecommendations />
             </div>

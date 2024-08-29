@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-600 text-gray-200 py-8">
+        <footer className="bg-gray-600 text-gray-200 py-8 px-5 md:px-2">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
                 <div className="space-y-4">
@@ -23,7 +23,7 @@ const Footer = () => {
                         <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
                     </ul>
                 </div>
-                =
+
                 <div>
                     <h3 className="text-white font-semibold mb-4">Contact Us</h3>
                     <ul className="space-y-2">
@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="text-center text-gray-500 mt-8">
+            <div className="text-center text-gray-200 mt-8">
                 &copy; {new Date().getFullYear()} MUKUL E-Commerce. All rights reserved.
             </div>
         </footer>
