@@ -70,30 +70,30 @@ const Header = () => {
             {isOpen && (
                 <div className="sm:hidden">
                     <div className="pt-2 pb-3 space-y-1">
-                        <Link to="/" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                        <Link to="/" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
                             Home
                         </Link>
-                        <Link to="/shop" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                        <Link to="/shop" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
                             Shop
                         </Link>
-                        <Link to="contact" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                        <Link to="contact" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
                             Contact
                         </Link>
 
-                        {user ? <> <Link to="/cart" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                        {user ? <> <Link to="/cart" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
                             Cart
                         </Link>
-                            <Link to="/account" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                            <Link to="/account" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
                                 Account
                             </Link>
                             <button className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => logout()}>Logout</button>
                         </>
                             :
                             <>
-                                <Link to="/signup" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                                <Link to="/signup" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
                                     signup
                                 </Link>
-                                <Link to="/signIn" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                                <Link to="/signIn" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
                                     login
                                 </Link></>}
 
