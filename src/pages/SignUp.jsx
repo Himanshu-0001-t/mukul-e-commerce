@@ -24,7 +24,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://e-comm-backend-pkj2.onrender.com/api/user/signUp", formData)
+            const response = await axios.post("https://e-comm-backend-opal.vercel.app/api/user/signUp", formData)
 
             if (response.data.status === "success") {
                 toast.success(response.data.message)

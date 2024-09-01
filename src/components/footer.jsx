@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
 
             <div className="text-center text-gray-200 mt-8">
-                &copy; {new Date().getFullYear()} MUKUL E-Commerce. All rights reserved.
+                &copy; {new Date().getFullYear()} MUKUL GADGETS-STORE All rights reserved.
             </div>
         </footer>
     );

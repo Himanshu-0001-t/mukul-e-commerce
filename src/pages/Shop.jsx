@@ -17,7 +17,7 @@ const Shop = () => {
     const searchProduct = async () => {
         try {
             setLoading(true)
-            let response = await axios.get(`https://e-comm-backend-pkj2.onrender.com/api/products/q/?search=${search}`)
+            let response = await axios.get(`https://e-comm-backend-opal.vercel.app/api/products/q/?search=${search}`)
 
             if (response.data.status === "success") {
                 setProducts(response.data.data)
