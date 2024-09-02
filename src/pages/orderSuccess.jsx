@@ -27,7 +27,7 @@ const OrderSuccess = () => {
                     You will receive an email confirmation shortly.
                 </p>
                 <Link to="/shop"
-                    className="mt-6 bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-200"
+                    className="my-6 block bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-200"
 
                 >
                     Continue Shopping

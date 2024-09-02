@@ -28,17 +28,23 @@ const UserAccountPage = () => {
                 <ul>
                     {orders.map((order) => (
                         <li key={order._id} className="border-b border-gray-200 py-4">
-                            <div className="flex justify-between items-center">
-                                <span className="font-semibold">Order ID :{order._id}</span>
-                                <span className="text-gray-600">status : {order.status}</span>
-                                <span className="font-semibold"> Price : {order.totalPrice} Rs</span>
+                            <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                                <div className="flex-1 mb-2 md:mb-0">
+                                    <span className="block font-semibold">Order ID: {order._id}</span>
+                                </div>
+                                <div className="flex-1 mb-2 md:mb-0">
+                                    <span className="block text-gray-600">Status: {order.status}</span>
+                                </div>
+                                <div className="flex-1">
+                                    <span className="block font-semibold">Price: {order.totalPrice} Rs</span>
+                                </div>
                             </div>
-
                         </li>
                     ))}
                 </ul>
             </section>
         </div>
+
     );
 };
 

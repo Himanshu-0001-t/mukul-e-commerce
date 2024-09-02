@@ -70,9 +70,9 @@ const ProductDetailPage = () => {
                     />
                 </div>
 
-                <div className="flex-1 lg:ml-8">
+                <div className="flex-1 lg:ml-8 my-2">
                     <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-                    <p className="text-lg text-gray-700 mb-4">{product.description}</p>
+                    <p className="text-lg text-gray-700 mb-4 max-h-60 overflow-auto">{product.description}</p>
                     <p className="text-xl font-semibold text-gray-900 mb-4">{product.price} Rs</p>
                     <div className='flex items-center justify-evenly'>
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600" onClick={() => hadnleAddToCart()}>

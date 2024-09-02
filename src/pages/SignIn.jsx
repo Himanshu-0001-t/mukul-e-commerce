@@ -24,7 +24,7 @@ const Signin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axiosInstance.post("/user/login", formData)
+            const response = await axiosInstance.post("/login", formData)
 
             if (response.data.status === "success" || response.data.success) {
                 const token = response.data.user_id;

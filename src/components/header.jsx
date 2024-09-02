@@ -36,7 +36,7 @@ const Header = () => {
                                 Cart
                             </Link>
                                 <Link to="/account" className="border-transparent text-white hover:border-gray-300 hover:text-gray-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                                    Account
+                                    Orders
                                 </Link>
                                 <button className="border-transparent text-white hover:border-gray-300 hover:text-gray-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" onClick={() => logout()}>Logout</button>
                             </>
@@ -51,7 +51,7 @@ const Header = () => {
                                     </Link></>}
                         </div>
                     </div>
-                    <div className="-mr-2 flex items-center sm:hidden">
+                    <div className="flex items-center sm:hidden">
                         <button
                             type="button"
                             className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
@@ -84,7 +84,7 @@ const Header = () => {
                             Cart
                         </Link>
                             <Link to="/account" className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => setIsOpen((prev) => !prev)}>
-                                Account
+                                Orders
                             </Link>
                             <button className="border-transparent text-gray-200 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium" onClick={() => logout()}>Logout</button>
                         </>

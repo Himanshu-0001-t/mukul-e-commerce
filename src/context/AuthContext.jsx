@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { toast } from 'react-hot-toast';
+import axiosInstance from '../utils/axios';
 
 const AuthContext = createContext();
 
@@ -23,7 +25,7 @@ export const AuthProvider = ({ children }) => {
 
     const logout = async () => {
         try {
-            let response = await axiosInstance.post("/user/logout")
+            let response = await axiosInstance.post("/logout")
 
             if (response.data.success) {
                 localStorage.removeItem('user_id');

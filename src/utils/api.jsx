@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const fetchProductById = async (id) => {
-    let response = await axios.get(`https://e-comm-backend-opal.vercel.app/api/product/${id}`,)
+    let response = await axios.get(`https://gadgetstore-34q8n2kx.b4a.run/api/product/${id}`,)
 
     if (response.data.status === "success") {
         return response.data.data
@@ -11,7 +11,7 @@ export const fetchProductById = async (id) => {
 };
 
 export const fetchRecommendedProducts = async () => {
-    let response = await axios.get("https://e-comm-backend-opal.vercel.app/api/products?limit=5")
+    let response = await axios.get("https://gadgetstore-34q8n2kx.b4a.run/api/products?limit=5")
 
     if (response.data.status === "success") {
         return response.data.data
@@ -23,7 +23,7 @@ export const fetchRecommendedProducts = async () => {
 
 export const fetchProducts = async () => {
     try {
-        let response = await axios.get("https://e-comm-backend-opal.vercel.app/api/products")
+        let response = await axios.get("https://gadgetstore-34q8n2kx.b4a.run/api/products")
 
         if (response.data.status === "success") {
             return response.data.data
@@ -37,7 +37,7 @@ export const fetchProducts = async () => {
 
 export const fetchProductHome = async () => {
     try {
-        let response = await axios.get("https://e-comm-backend-opal.vercel.app/api/products?limit=8")
+        let response = await axios.get("https://gadgetstore-34q8n2kx.b4a.run/api/products/?limit=8")
 
         if (response.data.status === "success") {
             return response.data.data
